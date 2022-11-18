@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+
+<div class="container">
+  <div>
+    <h1>프록시 테스트</h1>
+    <p th:text="'보낼 주소: ' + ${url}">url 받을 장소</p>
+
+    <p>&lt;리퀘스트 헤더&gt;</p>
+    <p th:utext="${#strings.replace(request, nlString,  '&lt;br /&gt;')}">리퀘스트 받을 장소</p>
+
+    <p>리스폰스</p>
+    <p th:text="'Packet: ' + ${response}">리스폰스 받을 장소</p>
+  </div>
+</div>
+
+</body>
+</html>
